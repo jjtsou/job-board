@@ -2,6 +2,16 @@
 
 This directory contains k6 performance and stress testing scripts for the job board application.
 
+## Example Results
+
+### Stress Test Results
+
+![Stress Test Results](./images/stress-test.png)
+
+### Spike Test Results  
+
+![Spike Test Results](./images/spike-test.png)
+
 ## Prerequisites
 
 1. Install k6:

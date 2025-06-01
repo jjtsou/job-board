@@ -42,8 +42,8 @@ export default function () {
 			}) || errorRate.add(1);
 		},
 		() => {
-			const searchTerm = ["dev", "mgr", "eng"][Math.floor(Math.random() * 3)];
-			const response = http.get(`${BASE_URL}/en?search=${searchTerm}`);
+			const searchTerm = ["it", "mgr", "eng"][Math.floor(Math.random() * 3)];
+			const response = http.get(`${BASE_URL}/en?q=${searchTerm}`);
 			check(response, {
 				"spike search success": (r) => r.status === 200,
 			}) || errorRate.add(1);
@@ -55,5 +55,5 @@ export default function () {
 	action();
 
 	// Minimal sleep during spike test
-	sleep(Math.random() * 0.5 + 0.2); // 0.2-0.7 seconds
+	sleep(0.5);
 }
