@@ -14,7 +14,7 @@ A modern, full-featured job board built using Next.js with internationalization 
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/jjtsou/job-board.git
    cd job-board
    ```
 
@@ -56,19 +56,6 @@ npm run test:spike   # Sudden traffic spike testing
 ```
 
 For detailed testing instructions and configuration, see [`stress-testing/README.md`](./stress-testing/README.md).
-
-### Known API Issues & Workarounds
-
-The external job board API has a known bug where the `total` count is inflated by 10. This has been compensated for in the application:
-
-```typescript
-// In /src/lib/api.ts
-const correctedTotal = jobsResponse.total >= 10 
-  ? jobsResponse.total - 10 
-  : jobsResponse.total;
-```
-
-This ensures accurate pagination and result counts displayed to users.
 
 ## 🏗️ Technical Approach & Decisions
 
