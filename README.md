@@ -2,6 +2,22 @@
 
 A modern, full-featured job board built using Next.js with internationalization (i18n) support. Easily browse job listings across multiple languages.
 
+## 🌐 Live Demo
+
+The application is deployed and live at: **[https://job-board-chi-indol.vercel.app](https://job-board-chi-indol.vercel.app)**
+
+### 📊 Performance & SEO
+
+The application achieves excellent performance and SEO scores as measured by Google Lighthouse:
+
+#### Mobile results
+
+![Lighthouse Performance Mobile](./images/lighthouse-mobile.png)
+
+#### Desktop results
+
+![Lighthouse Performance Desktop](./images/lighthouse-desktop.png)
+
 ## 🚀 Setup Instructions
 
 ### Prerequisites
