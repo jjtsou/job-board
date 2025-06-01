@@ -42,6 +42,21 @@ A modern, full-featured job board built using Next.js with internationalization 
 - `npm run format` - Format code with Biome
 - `npm run check` - Run all Biome checks (lint + format)
 
+### Performance Testing
+
+The project includes k6 stress testing scripts to evaluate application performance under load:
+
+```bash
+# Navigate to stress testing directory
+cd stress-testing
+
+# Run stress tests (requires k6 installation)
+npm run test:stress  # Gradual load increase to 100 users
+npm run test:spike   # Sudden traffic spike testing
+```
+
+For detailed testing instructions and configuration, see [`stress-testing/README.md`](./stress-testing/README.md).
+
 ### Known API Issues & Workarounds
 
 The external job board API has a known bug where the `total` count is inflated by 10. This has been compensated for in the application:
