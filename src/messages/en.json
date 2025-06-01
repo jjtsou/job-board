@@ -1,0 +1,53 @@
+{
+	"common": {
+		"filter": "Filter",
+		"location": "Location",
+		"category": "Category",
+		"keyword": "Keyword",
+		"results": "Results",
+		"noResults": "No jobs found",
+		"loading": "Loading...",
+		"error": "Something went wrong",
+		"retry": "Try again",
+		"page": "Page",
+		"of": "of",
+		"previous": "Previous",
+		"next": "Next",
+		"home": "Home",
+		"backToJobs": "Back to Jobs",
+		"language": "Language"
+	},
+	"navigation": {
+		"home": "Home",
+		"jobs": "Jobs",
+		"about": "About",
+		"contact": "Contact"
+	},
+	"jobs": {
+		"title": "Find Your Dream Job",
+		"subtitle": "Discover thousands of job opportunities",
+		"search": "Search",
+		"searchPlaceholder": "Search for jobs, companies, or keywords",
+		"selectLocation": "Select a location",
+		"selectCategory": "Select a category",
+		"searchJobs": "Search for jobs",
+		"allLocations": "All locations",
+		"allCategories": "All categories",
+		"applyNow": "Apply Now",
+		"viewDetails": "View Details",
+		"postedOn": "Posted on",
+		"company": "Company",
+		"salary": "Salary",
+		"type": "Type",
+		"experience": "Experience",
+		"description": "Description",
+		"requirements": "Requirements",
+		"tags": "Tags",
+		"jobDescription": "Job Description",
+		"interestedInPosition": "Interested in this position?"
+	},
+	"meta": {
+		"title": "Job Search - Find Your Perfect Career",
+		"description": "Search and find your perfect job from thousands of opportunities. Filter by location, category, and keywords to discover your next career move."
+	}
+}
