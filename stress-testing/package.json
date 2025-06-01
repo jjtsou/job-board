@@ -1,0 +1,16 @@
+{
+	"name": "job-board-stress-testing",
+	"version": "1.0.0",
+	"description": "k6 stress testing suite for job board application",
+	"scripts": {
+		"test:stress": "k6 run stress-test.js",
+		"test:spike": "k6 run spike-test.js"
+	},
+	"keywords": [
+		"k6",
+		"stress-testing",
+		"performance",
+		"load-testing",
+		"job-board"
+	]
+}
