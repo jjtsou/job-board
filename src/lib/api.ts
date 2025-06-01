@@ -22,11 +22,11 @@ const buildSearchParams = (
 export async function fetchJobs(
 	params: JobSearchParams = {},
 ): Promise<JobsResponse> {
-	const { lang, page, pageSize, q, location, category } = params;
+	const { lang, page = 0, pageSize, q, location, category } = params;
 
 	const searchParams = buildSearchParams({
 		lang: lang || "en",
-		page: page?.toString(),
+		page: page > 1 ? (page - 1).toString() : undefined,
 		pageSize: pageSize?.toString(),
 		q,
 		location,
@@ -48,14 +48,8 @@ export async function fetchJobs(
 		}
 		const jobsResponse = await response.json();
 		console.log("Jobs response:", jobsResponse);
-		// Fix: Compensate for API bug that inflates total by 10
-		const correctedTotal =
-			jobsResponse.total >= 10 ? jobsResponse.total - 10 : jobsResponse.total;
 
-		return {
-			...jobsResponse,
-			total: correctedTotal,
-		};
+		return jobsResponse;
 	} catch (error) {
 		console.error("Error fetching jobs:", error);
 		throw new Error("Failed to fetch jobs");

@@ -18,6 +18,7 @@ export function JobList({ jobsData }: JobListProps) {
 
 	const { results, total, page, pageSize } = jobsData;
 	const totalPages = Math.ceil(total / pageSize);
+	const currentPage = page + 1;
 
 	return (
 		<VStack gap={6} align="stretch">
@@ -30,10 +31,10 @@ export function JobList({ jobsData }: JobListProps) {
 				))}
 			</VStack>
 			<JobPagination
-				currentPage={page}
+				currentPage={currentPage}
 				totalPages={totalPages}
-				hasNextPage={page < totalPages}
-				hasPreviousPage={page > 1}
+				hasNextPage={currentPage < totalPages}
+				hasPreviousPage={currentPage > 1}
 			/>
 		</VStack>
 	);
