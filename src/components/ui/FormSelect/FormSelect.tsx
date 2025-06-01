@@ -11,6 +11,7 @@ export function FormSelect({
 	placeholder,
 	allOptionLabel,
 	options,
+	ariaLabel,
 }: FormSelectProps) {
 	const locale = useLocale();
 	const collection = createSelectCollection(options, allOptionLabel, locale);
@@ -24,7 +25,7 @@ export function FormSelect({
 		>
 			<Select.HiddenSelect />
 			<Select.Control>
-				<Select.Trigger>
+				<Select.Trigger aria-label={ariaLabel}>
 					<Select.ValueText placeholder={placeholder} />
 				</Select.Trigger>
 				<Select.IndicatorGroup>

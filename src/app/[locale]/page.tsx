@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container, VStack, Heading, Text, Box } from "@chakra-ui/react";
 import { JobSearchForm, JobList } from "@/components/jobs";
 import { fetchJobs, fetchFilters } from "@/lib/api";
+import { createAbsoluteUrl } from "@/lib/url";
 import type { JobSearchParams } from "@/types/job";
 import type { Metadata } from "next";
 import { LanguageSwitcher } from "@/components/ui";
@@ -42,10 +43,10 @@ export async function generateMetadata({
 			locale,
 		},
 		alternates: {
-			canonical: `/${locale}`,
+			canonical: createAbsoluteUrl("/"),
 			languages: {
-				en: "/en",
-				el: "/el",
+				en: createAbsoluteUrl("/en"),
+				el: createAbsoluteUrl("/el"),
 			},
 		},
 	};

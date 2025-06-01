@@ -10,4 +10,5 @@ export interface FormSelectProps {
 	placeholder: string;
 	allOptionLabel: string;
 	options: Option[];
+	ariaLabel?: string;
 }

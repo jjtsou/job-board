@@ -63,6 +63,7 @@ export function JobSearchForm({ filters, initialValues }: JobSearchFormProps) {
 							placeholder={t("selectLocation")}
 							allOptionLabel={t("allLocations")}
 							options={filters.locations}
+							ariaLabel={t("selectLocation")}
 						/>
 					</Box>
 					<Box flex="1">
@@ -72,6 +73,7 @@ export function JobSearchForm({ filters, initialValues }: JobSearchFormProps) {
 							placeholder={t("selectCategory")}
 							allOptionLabel={t("allCategories")}
 							options={filters.categories}
+							ariaLabel={t("selectCategory")}
 						/>
 					</Box>
 					<Button
