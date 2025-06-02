@@ -3,6 +3,12 @@ import { Container, VStack, Heading, Text, Box } from "@chakra-ui/react";
 import { JobSearchForm, JobList } from "@/components/jobs";
 import { fetchJobs, fetchFilters } from "@/lib/api";
 import { createAbsoluteUrl } from "@/lib/url";
+import {
+	generateCanonicalUrl,
+	normalizeSearchParams,
+	createTitleParts,
+	generateMetaTags,
+} from "@/lib/seo";
 import type { JobSearchParams } from "@/types/job";
 import type { Metadata } from "next";
 import { LanguageSwitcher } from "@/components/ui";
@@ -20,18 +26,27 @@ export async function generateMetadata({
 	const searchParamsData = await searchParams;
 	const t = await getTranslations({ locale, namespace: "meta" });
 
-	const q = searchParamsData.q ?? "";
-	const location = searchParamsData.location ?? "";
-	const category = searchParamsData.category ?? "";
-	const parts = [q, category, location && `in ${location}`].filter(Boolean);
+	const { q, location, category, page } =
+		normalizeSearchParams(searchParamsData);
 
-	let title = t("title");
-	let description = t("description");
+	const titleParts = createTitleParts({
+		q,
+		location,
+		category,
+		page: "",
+	});
+	const { title, description } = generateMetaTags(
+		titleParts,
+		t("title"),
+		t("description"),
+	);
 
-	if (parts.length) {
-		title = `${parts.join(" ")} Jobs - Job Search`;
-		description = `Find ${parts.join(" ")} jobs and career opportunities. Browse thousands of job listings and apply today.`;
-	}
+	const canonicalUrl = generateCanonicalUrl(locale, {
+		q,
+		location,
+		category,
+		page,
+	});
 
 	return {
 		title,
@@ -43,7 +58,7 @@ export async function generateMetadata({
 			locale,
 		},
 		alternates: {
-			canonical: createAbsoluteUrl("/"),
+			canonical: canonicalUrl,
 			languages: {
 				en: createAbsoluteUrl("/en"),
 				el: createAbsoluteUrl("/el"),
