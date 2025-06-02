@@ -40,13 +40,24 @@ The application achieves excellent performance and SEO scores as measured by Goo
    npm install
    ```
 
-3. **Start the development server**
+3. **Environment setup**
+
+   Create a `.env.local` file in the root directory:
+
+   ```bash
+   # Required: Base URL for absolute URL generation
+   NEXT_PUBLIC_BASE_URL=http://localhost:3000
+   ```
+
+   > **Note:** If you use Vercel, and you do not want to set NEXT_PUBLIC_BASE_URL in production, `VERCEL_URL` is automatically provided.
+
+4. **Start the development server**
 
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Available Scripts
