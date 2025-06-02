@@ -39,6 +39,7 @@ export function JobPagination({
 			gap={4}
 			py={4}
 			direction={{ base: "column", md: "row" }}
+			data-testid="job-pagination"
 		>
 			<Text fontSize="sm" color="gray.500" fontWeight="medium">
 				{t("page")} {currentPage} {t("of")} {totalPages}

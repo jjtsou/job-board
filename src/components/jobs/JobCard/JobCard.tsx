@@ -45,6 +45,7 @@ export function JobCard({ job }: JobCardProps) {
 				transition: "all 0.2s ease-in-out",
 			}}
 			minH="200px"
+			data-testid={`job-card-${job.id}`}
 		>
 			<VStack align="stretch" gap={4}>
 				<Flex
