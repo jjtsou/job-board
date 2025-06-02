@@ -14,7 +14,7 @@ The application achieves excellent performance and SEO scores as measured by Goo
 
 ![Lighthouse Performance Mobile](./images/lighthouse-mobile.png)
 
-#### Desktop results
+#### Desktop results (fireworks from Google included)
 
 ![Lighthouse Performance Desktop](./images/lighthouse-desktop.png)
 
