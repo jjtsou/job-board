@@ -17,9 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Job Search - Find Your Perfect Career",
-	description:
-		"Search and find your perfect job from thousands of opportunities.",
+	viewport: "width=device-width, initial-scale=1",
+	robots: "index, follow",
 };
 
 export default function RootLayout({

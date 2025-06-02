@@ -80,7 +80,7 @@ export default async function sitemap({
 }: {
 	id: number | string;
 }): Promise<MetadataRoute.Sitemap> {
-	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 	const currentDate = new Date();
 	const numericId = Number(id);
 
