@@ -16,10 +16,6 @@ const geistMono = Geist_Mono({
 	preload: false,
 });
 
-export const metadata: Metadata = {
-	robots: "index, follow",
-};
-
 export const viewport: Viewport = {
 	width: "device-width",
 	initialScale: 1,
